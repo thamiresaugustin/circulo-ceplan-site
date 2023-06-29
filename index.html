@@ -1,28 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="" sizes="any" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Circulo Ceplan</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <section class="hero">
-        <header class="header-container">
-            <span>CIRCULO CEPLAN</span>
-            <nav class="nav-container">
-                <ul>
-                    <li>PROJETOS</li>
-                    <li>GALERIA</li>
-                    <li>SUGESTÕES</li>
-                </ul>
-            </nav>
-        </header>
-        <div class="hero-container">
-            <p class="hero-content">Lorem ipsum, dolor sit amet cnsectetur adipisicing elit. Officia commodi asperiores culpa soluta ut. </p>
-            <button>saiba mais</button>
+  </head>
+  <body>
+    <header class="header-container" id="header-container">
+      <video autoplay loop muted plays-inline class="hero-video">
+        <source src="./video/hero.mp4" type="video/mp4" style="background-size: 100% 100%;">
+      </video>
+      <nav class="nav-container" id="nav-container" ">
+        <a href=" #" class="logo">
+        <span class="logo-name">Círculo Ceplan</span>
+        </a>
+        <ul class="menu-items">
+          <li><a href="#projects" class="nav">Projetos</a> </li>
+          <li><a href="#gallery" class="nav">Galeria</a></li>
+          <li><a href="#contact" class="nav">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="hero-container" id="hero-container">
+        <div class="hero-text">
+          <p>
+            Transforme sua vida com nosso programa! Aqui, você terá a chance de se incluir digitalmente, socialmente e explorar a cultura. Descubra o poder de uma educação ampla e alcance novos patamares.
+          </p>
+          <button>Quero participar</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="about-container" id="projects">
+      <p class="about-title">
+        PROJETOS
+      </p>
+      <div class="card-list">
+        <div class="card">
+          <img src="./images/bike.png" alt="foto da cidade" class="avatar">
+          <div class="content">
+            <span>PEDAL</span>
+            <p>Projeto voltado para todas as pessoas da comunidade com interesse nos benefícios da atividade física para uma vida saudável, tendo a ASBCiclo como parceira da ação.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/telecentro.png" alt="foto da cidade" class="avatar">
+          <div class="content">
+            <span>TELECENTRO</span>
+            <p>Projeto voltado para crianças, adolescentes e idosos encaminhados pelos Centros de Referência de Assistência Social (CRAS) de São Bento do Sul/SC, do bairro Centenário.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/training.png" alt="foto da cidade" class="avatar">
+          <div class="content">
+            <span>TRAINING</span>
+            <p>Projeto voltado para as pessoas da comunidade em geral com interesse em capacitação técnica, por meio de minicursos, palestras ou oficinas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-container" id="gallery">
+      <p class="gallery-title">
+        GALERIA
+      </p>
+      <section class="images">
+        <div class="img fade">
+            <img src="/images/img3.png" />
+        </div>
+        <div class="img fade">
+            <img src="/images/img2.jpeg" />
+        </div>
+        <div class="img fade">
+            <img src="/images/img1.jpeg" />
+        </div>
+        <div class="img fade">
+            <img src="/images/img4.png" />
+        </div>
+        <a class="prev" onclick="plusImg(-1)">❮</a>
+        <a class="next" onclick="plusImg(1)">❯</a>
+        <div style="text-align: center">
+            <span class="dot" onclick="currentImg(1)"></span>
+            <span class="dot" onclick="currentImg(2)"></span>
+            <span class="dot" onclick="currentImg(3)"></span>
+            <span class="dot" onclick="currentImg(4)"></span>
         </div>
     </section>
-</body>
+    </section>
+
+    <section class="contact-container" id="contact">
+      <p class="contact-title">
+        SUGESTÕES
+      </p>
+      <form action="https://formsubmit.co/agro_martins@hotmail.com" method="post" onsubmit="return false">
+        <input type="hidden" name="_captcha" value="false">
+        <label for="POST-name">Nome</label>
+        <input type="text" name="" id="">
+
+        <label for="POST-email">E-mail</label>
+        <input type="email" name="" id="">
+
+        <label for="POST-message">Escreva sua mensagem</label>
+        <textarea class="message" name="" id="" cols="30" rows="10"></textarea>
+        <button>enviar</button>
+      </form>
+    </section>
+
+    <footer class="footer" id="contact">
+      <div class="footer-container">
+        <div class="left-side">
+          <div class="footer-content">
+            <div class="content-header">
+              <h3>Contatos</h3>
+            </div>
+            <span>Endereço</span>
+            <span>Rua Luiz Fernando Hastreiter, 180 - Centenário</span>
+            <span>CEP: CEP: 89.283-081 São Bento do Sul-SC </span>
+          </div>
+          <div class="footer-content">
+            <div class="content-header">
+              <h3>Redes sociais</h3>
+            </div>
+            <div class="links">
+              <img src="./images/facebook.png" alt="facebook link">
+              <img src="./images/insta.png" alt="instagram link"
+                onclick="location.href='https://instagram.com/agromartins_desde1992'">
+              <img src="./images/youtube.png" alt="youtube link">
+              <img src="./images/linkedin.png" alt="linkedin link">
+            </div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="footer-content">
+            <img src="./images/marca-rodape.png"/>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
